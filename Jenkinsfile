@@ -1,22 +1,22 @@
 pipeline {
   agent any
   stages {
-    stage('Development') {
+    stage('Dev') {
       steps {
         echo 'I am in development stage'
         sh 'git --version'
       }
     }
-    stage('Testing') {
+    stage('Test') {
       steps {
-        echo 'I am in testing stage'
-        sh 'docker --version'
+        echo 'I am in test'
+        sh 'python --version'
       }
     }
-    stage('Production') {
+    stage('Prod') {
       steps {
-        echo 'I am in production stage'
-        sh 'java --version'
+        echo 'I am in prod'
+        sh 'node --version'
       }
     }
   }
