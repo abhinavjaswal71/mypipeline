@@ -8,10 +8,11 @@ pipeline {
         sh 'docker build -t myapp:latest .'
       }
     }
-     Stage ('Docker Run') {
+    stage('Docker Run') {
       steps {
         echo 'Running Docker Container'
-        sh 'docker run -d -p 8080:8080 myapp:latest'
+        sh 'docker run -d -p 8080:8000 myapp:latest'
       }
+    }
   }
 }
