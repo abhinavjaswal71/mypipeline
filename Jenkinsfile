@@ -2,11 +2,16 @@ pipeline {
   agent any
   stages {
    
-    stage('Prod') {
+    stage('Docker Build') {
       steps {
-        echo 'I am in prod'
-        sh 'docker --version'
+        echo 'I am in Docker Build Stage'
+        sh 'docker build -t myapp:latest .'
       }
     }
+     Stage ('Docker Run') {
+      steps {
+        echo 'Running Docker Container'
+        sh 'docker run -d -p 8080:8080 myapp:latest'
+      }
   }
 }
