@@ -11,7 +11,7 @@ pipeline {
     stage('Docker Run') {
       steps {
         echo 'Running Docker Container'
-        sh 'docker run -d -p 8080:8000 myapp:latest'
+        sh 'docker run -d -p 8081:8000 myapp:latest'
       }
     }
   }
