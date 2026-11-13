@@ -26,7 +26,7 @@ class AppHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", "8000"))
+    port = int(os.environ.get("PORT", "5000"))
     server = HTTPServer(("0.0.0.0", port), AppHandler)
     print("Serving on http://localhost:{0}".format(port), flush=True)
     server.serve_forever()
