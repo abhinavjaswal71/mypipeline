@@ -1,2 +1,2 @@
 # mypipeline
-testing jenkins pipeline
+testing jenkins pipeline - it'll be start for the new journey
